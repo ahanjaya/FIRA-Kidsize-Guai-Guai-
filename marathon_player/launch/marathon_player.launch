@@ -1,0 +1,11 @@
+<launch>
+    <node name="marathon_params" pkg="fira_params" type="marathon_server.py" />
+    <node name="dynamic_marathon_p" pkg="dynamic_reconfigure" type="dynparam" args="load /marathon_params/player /home/barelangfc/catkin_ws/dataset/marathon_player_p.yaml" />
+    <node name="dynamic_marathon_l" pkg="dynamic_reconfigure" type="dynparam" args="load /marathon_params/line /home/barelangfc/catkin_ws/dataset/marathon_line_p.yaml" />
+    <node name="dynamic_marathon_m" pkg="dynamic_reconfigure" type="dynparam" args="load /marathon_params/marker /home/barelangfc/catkin_ws/dataset/marathon_marker_p.yaml" />
+
+    <node name="darwin_motion_bridge" pkg="darwin_motion_bridge" type="darwin_motion_bridge.py" />
+    <node name="marathon_line_detector" pkg="marathon_line_detector" type="marathon_line_detector.py" />
+    <node name="marathon_marker_detector_with_color" pkg="marathon_marker_detector_with_color" type="marathon_marker_detector_with_color.py"/>  
+    <node name="marathon_player" pkg="marathon_player" type="marathon_player.py" output="screen"/>
+</launch>

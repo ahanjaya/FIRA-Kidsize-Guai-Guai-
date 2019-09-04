@@ -1,0 +1,14 @@
+<launch>
+    <!-- <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" >
+	<param name="pixel_format" value="yuyv"/>
+	<param name="image_width" value="640" />
+	<param name="image_height" value="480" />
+	<param name="framerate" value="30" />
+	<param name="autofocus" value="false" />
+    </node> -->
+    <node name="mission_possible_params" pkg="dynamic_params" type="mission_possible_server.py" />
+    <node name="dynamic_reconfigure_load" pkg="dynamic_reconfigure" type="dynparam" args="load /mission_possible_params /home/barelangfc/catkin_ws/dataset/mission_possible_param.yaml" />
+    <node name="darwin_motion_bridge" pkg="darwin_motion_bridge" type="darwin_motion_bridge.py" />
+    <node name="mission_possible_vision" pkg="mission_possible_vision" type="mission_possible_vision.py" />
+    <node name="mission_possible_player" pkg="mission_possible_player" type="mission_possible_player.py" output="screen"/>
+</launch>

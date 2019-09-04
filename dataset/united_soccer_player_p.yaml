@@ -1,0 +1,47 @@
+!!python/object/new:dynamic_reconfigure.encoding.Config
+dictitems:
+  Body_KP: 0.45
+  KP_Ball_Pos_X: 0.015
+  KP_Ball_Pos_Y: 0.05
+  KP_Compass_A: 0.7
+  KP_Compass_X: 0.02
+  KP_Compass_Y: 0.0
+  Pan_KD: 1.0e-05
+  Pan_KI: 0.0
+  Pan_KP: 0.06
+  Pan_Kick: -0.2
+  Pan_Step: 0.03
+  Tilt_KD: 0.0
+  Tilt_KI: 0.0
+  Tilt_KP: 0.07
+  Tilt_Kick: -0.05
+  Tilt_Step: 0.5
+  groups: !!python/object/new:dynamic_reconfigure.encoding.Config
+    dictitems:
+      Body_KP: 0.45
+      KP_Ball_Pos_X: 0.015
+      KP_Ball_Pos_Y: 0.05
+      KP_Compass_A: 0.7
+      KP_Compass_X: 0.02
+      KP_Compass_Y: 0.0
+      Pan_KD: 1.0e-05
+      Pan_KI: 0.0
+      Pan_KP: 0.06
+      Pan_Kick: -0.2
+      Pan_Step: 0.03
+      Tilt_KD: 0.0
+      Tilt_KI: 0.0
+      Tilt_KP: 0.07
+      Tilt_Kick: -0.05
+      Tilt_Step: 0.5
+      groups: !!python/object/new:dynamic_reconfigure.encoding.Config
+        state: []
+      id: 0
+      name: Default
+      parameters: !!python/object/new:dynamic_reconfigure.encoding.Config
+        state: []
+      parent: 0
+      state: true
+      type: ''
+    state: []
+state: []

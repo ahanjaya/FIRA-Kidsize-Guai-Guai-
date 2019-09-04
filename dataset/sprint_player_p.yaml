@@ -1,0 +1,37 @@
+!!python/object/new:dynamic_reconfigure.encoding.Config
+dictitems:
+  Body_Backward_KP: 0.8
+  Body_Forward_KP: 0.55
+  Pan_KD: 1.0e-05
+  Pan_KI: 0.0
+  Pan_KP: 0.1
+  Pan_Step: 0.03
+  Scan_Rate: 1
+  Tilt_KD: 0.0
+  Tilt_KI: 0.0
+  Tilt_KP: 0.07
+  Tilt_Step: 0.035
+  groups: !!python/object/new:dynamic_reconfigure.encoding.Config
+    dictitems:
+      Body_Backward_KP: 0.8
+      Body_Forward_KP: 0.55
+      Pan_KD: 1.0e-05
+      Pan_KI: 0.0
+      Pan_KP: 0.1
+      Pan_Step: 0.03
+      Scan_Rate: 1
+      Tilt_KD: 0.0
+      Tilt_KI: 0.0
+      Tilt_KP: 0.07
+      Tilt_Step: 0.035
+      groups: !!python/object/new:dynamic_reconfigure.encoding.Config
+        state: []
+      id: 0
+      name: Default
+      parameters: !!python/object/new:dynamic_reconfigure.encoding.Config
+        state: []
+      parent: 0
+      state: true
+      type: ''
+    state: []
+state: []

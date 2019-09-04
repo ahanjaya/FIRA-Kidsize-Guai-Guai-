@@ -1,0 +1,8 @@
+<launch>
+    <node name="sprint_params" pkg="fira_params" type="sprint_server.py" />
+    <node name="dynamic_sprint_p" pkg="dynamic_reconfigure" type="dynparam" args="load /sprint_params/player /home/jiajia/catkin_ws/src/dataset/sprint_player_p.yaml" />
+    <node name="dynamic_sprint_v" pkg="dynamic_reconfigure" type="dynparam" args="load /sprint_params/vision /home/jiajia/catkin_ws/src/dataset/sprint_vision_p.yaml" />
+    <node name="darwin_motion_bridge" pkg="darwin_motion_bridge" type="darwin_motion_bridge.py" />
+    <node name="sprint_aruco_detector" pkg="sprint_aruco_detector" type="sprint_aruco_detector.py"/>
+    <node name="sprint_player" pkg="sprint_player" type="sprint_player.py" output="screen"/>
+</launch>

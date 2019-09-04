@@ -1,0 +1,14 @@
+<launch>
+    <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" >
+	<param name="pixel_format" value="yuyv"/>
+	<param name="image_width" value="640" />
+	<param name="image_height" value="480" />
+	<param name="framerate" value="30" />
+	<param name="autofocus" value="false" />
+    </node>
+    <node name="obstacle_run_params" pkg="dynamic_params" type="obstacle_server.py" />
+    <node name="dynamic_reconfigure_load" pkg="dynamic_reconfigure" type="dynparam" args="load /obstacle_run_params /home/barelangfc/catkin_ws/dataset/obstacle_run_param.yaml" />
+    <node name="darwin_motion_bridge" pkg="darwin_motion_bridge" type="darwin_motion_bridge.py" />
+    <node name="obstacle_run_detector" pkg="obstacle_run_detector" type="obstacle_run_detector.py" />
+    <node name="obstacle_run_player" pkg="obstacle_run_player" type="obstacle_run_player.py" output="screen"/>
+</launch>

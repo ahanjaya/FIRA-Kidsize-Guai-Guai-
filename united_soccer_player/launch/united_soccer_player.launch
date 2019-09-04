@@ -1,0 +1,10 @@
+<launch>
+    <node name="united_soccer_params" pkg="fira_params" type="united_soccer_server.py" />
+    <node name="dynamic_united_soccer_p" pkg="dynamic_reconfigure" type="dynparam" args="load /united_soccer_params/player /home/barelangfc/catkin_ws/dataset/united_soccer_player_p.yaml" />
+    <node name="dynamic_united_soccer_v" pkg="dynamic_reconfigure" type="dynparam" args="load /united_soccer_params/vision /home/barelangfc/catkin_ws/dataset/united_soccer_vision_p.yaml" />
+
+    <node name="compass_sensor" pkg="compass_sensor" type="compass_sensor.py" />
+    <node name="darwin_motion_bridge" pkg="darwin_motion_bridge" type="darwin_motion_bridge.py" />
+    <node name="united_soccer_ball_detector" pkg="united_soccer_ball_detector" type="united_soccer_ball_detector.py" output="screen"/>
+    <node name="united_soccer_player" pkg="united_soccer_player" type="united_soccer_player.py" output="screen"/>
+</launch>
